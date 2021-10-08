@@ -1,7 +1,7 @@
-# Google Cloud SQL Proxy
+# Google Cloud SQL Proxy Unix Socket
 
 Github action which will start a [Google Cloud SQL Proxy](https://cloud.google.com/sql/docs/postgres/sql-proxy) as Docker container. 
-
+Based on https://github.com/mattes/gce-cloudsql-proxy-action
 ## Prerequisites
 
 Set up the following resources manually in the Cloud Console 
