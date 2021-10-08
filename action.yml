@@ -37,7 +37,6 @@ runs:
 
         # start container
         docker run -d --net host --name gce-cloudsql-proxy --restart on-failure \
-        # -v /tmp/gce-cloudsql-proxy:/tmp/gce-cloudsql-proxy \
         -v /tmp/gce-cloudsql-proxy:/cloudsql \
         gcr.io/cloudsql-docker/gce-proxy:${{ inputs.proxy_version }} \
         /cloud_sql_proxy \
