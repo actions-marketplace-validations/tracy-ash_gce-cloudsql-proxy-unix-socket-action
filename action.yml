@@ -12,7 +12,7 @@ inputs:
   dir:
     description: "directory for socket"
     required: false
-    default: "/tmp/gce-cloudsql-proxy/"
+    default: "/tmp/gce-cloudsql-proxy"
   instance:
     description: "CloudSQL instance"
     required: true

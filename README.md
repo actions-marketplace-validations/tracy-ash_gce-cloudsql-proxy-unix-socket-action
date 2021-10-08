@@ -13,12 +13,12 @@ or use a tool like [Terraform](https://www.terraform.io).
 
 ## Github Action Inputs
 
-| Variable                         | Description                                                                 |
-|----------------------------------|-----------------------------------------------------------------------------|
-| `creds`                          | ***Required*** Service Account JSON Key (not base64 encoded)                |
-| `instance`                       | ***Required*** Cloud SQL connection name                                    |
-| `dir`                            | directory to use for unix socket connection, default tmp/cloudsql           |
-| `proxy_version`                  | Cloud SQL Proxy version, default 1.21.0                                     |
+| Variable                         | Description                                                                  |
+|----------------------------------|------------------------------------------------------------------------------|
+| `creds`                          | ***Required*** Service Account JSON Key (not base64 encoded)                 |
+| `instance`                       | ***Required*** Cloud SQL connection name                                     |
+| `dir`                            | directory to use for unix socket connection, default /tmp/gce-cloudsql-proxy |
+| `proxy_version`                  | Cloud SQL Proxy version, default 1.21.0                                      |
 
 
 ## Example Usage
