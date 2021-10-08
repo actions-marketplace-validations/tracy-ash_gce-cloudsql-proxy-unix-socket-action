@@ -1,5 +1,5 @@
-name: "Google Cloud SQL Proxy"
-description: "Start Google CloudSQL Proxy"
+name: "Google Cloud SQL Unix Socket Proxy"
+description: "Start Google CloudSQL Proxy using unix socket. Based on https://github.com/mattes/gce-cloudsql-proxy-action"
 
 branding:
   icon: "database"
@@ -12,7 +12,7 @@ inputs:
   dir:
     description: "directory for socket"
     required: false
-    default: "tmp/cloudsql"
+    default: "/tmp/gce-cloudsql-proxy/"
   instance:
     description: "CloudSQL instance"
     required: true
