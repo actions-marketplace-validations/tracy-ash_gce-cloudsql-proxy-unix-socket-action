@@ -17,14 +17,14 @@ or use a tool like [Terraform](https://www.terraform.io).
 |----------------------------------|-----------------------------------------------------------------------------|
 | `creds`                          | ***Required*** Service Account JSON Key (not base64 encoded)                |
 | `instance`                       | ***Required*** Cloud SQL connection name                                    |
-| `port`                           | Listen on port, default 5432                                                |
+| `dir`                            | directory to use for unix socket connection, default tmp/cloudsql           |
 | `proxy_version`                  | Cloud SQL Proxy version, default 1.21.0                                     |
 
 
 ## Example Usage
 
 ```
-uses: mattes/gce-cloudsql-proxy-action@v1
+uses: mattes/gce-cloudsql-proxy-unix-socket-action@v1
 with:
   creds: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
   instance: my-project:us-central1:instance-1

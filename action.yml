@@ -16,10 +16,10 @@ inputs:
   instance:
     description: "CloudSQL instance"
     required: true
-  port:
-    description: "Listen on port"
-    required: false
-    default: 5432
+  # port:
+  #   description: "Listen on port"
+  #   required: false
+  #   default: 5432
   proxy_version:
     description: "CloudSQL Proxy Version"
     required: false
@@ -41,9 +41,7 @@ runs:
         gcr.io/cloudsql-docker/gce-proxy:${{ inputs.proxy_version }} \
         /cloud_sql_proxy \
           -credential_file /tmp/gce-cloudsql-proxy/key.json \
-          # -dir /tmp \
           -dir=${{ inputs.dir }} \
-          # -instances=${{ inputs.instance }}=tcp:127.0.0.1:${{ inputs.port }}
           -instances=${{ inputs.instance }}
 
         # wait until connections are accepted
