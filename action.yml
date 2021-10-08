@@ -48,7 +48,7 @@ runs:
         sleep 3
         isready=0
         for i in {1..10}; do
-          echo "Wait for connections to be ready (PORT: ${{ inputs.port }})... $i/10"
+          echo "Wait for connections to be ready (PORT: ${{ inputs.port }}) ... $i/10"
           (${{ github.action_path }}/wait-for-it.sh --quiet --timeout=3 --host=127.0.0.1 --port=${{ inputs.port }} || exit $?) && true # escape bash's pipefail
           isready=$?
           if [[ $isready -eq 0 ]]; then
