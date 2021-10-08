@@ -9,6 +9,10 @@ inputs:
   creds:
     description: "Contents of a Service Account JSON Key"
     required: true
+  dir:
+    description: "directory for socket"
+    required: false
+    default: "tmp/cloudsql"
   instance:
     description: "CloudSQL instance"
     required: true
