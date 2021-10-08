@@ -6,6 +6,12 @@ branding:
   color: "red"
 
 inputs:
+  project_id:
+    description: GCP project id
+    required: true
+  service_account_key:
+    description: GCP service account key
+    required: true
   creds:
     description: "Contents of a Service Account JSON Key"
     required: true
@@ -28,6 +34,14 @@ inputs:
 runs:
   using: "composite"
   steps:
+
+    - name: Set up Cloud SDK
+      uses: google-github-actions/setup-gcloud@master
+      with:
+        project_id: ${{ inputs.project_id }}
+        service_account_key: ${{ inputs.service_account_key }}
+        export_default_credentials: true
+
     - name: Start Google Cloud SQL Proxy
       shell: bash
       run: |
